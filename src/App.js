@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BookContainer from "./components/Book/BookContainer";
+import AddForm from "./components/AddForm/AddForm";
+import Header from "./components/Header/Header";
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className='container mt-3'>
+        <AddForm />
+        <BookContainer />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+// json-server -p 3005 --watch db.json
